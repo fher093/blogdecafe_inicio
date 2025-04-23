@@ -5,6 +5,7 @@
     --fuenteParrafos:"Open Sans", sans-serif; 
 
     --primario: #784DEC;
+    --gris: #e1e1e1;
     --blanco: #fff; 
     --negro: #000;
 } 
@@ -120,4 +121,52 @@ img{
     font-size: 1.8rem; 
     color: var(--blanco); 
   
+}
+
+/*CONTENIDO PRINCIPAL*/
+.contenido-principal{
+    padding: 1rem;
+}
+
+@media(min-width: 768px){
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+} 
+
+.entrada{
+    border-bottom: 1px solid var(--gris);/*Agreaga una linea al final de cada entrada*/
+    margin-bottom: 2rem;
+} 
+
+/*Si en el ultimo elemento no deseo dicha linea hago uso de last of type*/
+.entrada:last-of-type{
+    border: none;
+    margin-bottom:0;
+} 
+
+/*Boton*/ 
+.boton{
+    display: block;/*para que en moviles tome todo el espacio disponible*/
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    padding: 1rem 3rem; 
+    text-align: center; 
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+} 
+
+@media(min-width: 768px){
+   .boton{
+    display: inline-block;/*para achicar los botones y respeta los width*/
+    /*inline-block toma el espacio necesario*/
+    }
+}
+
+.boton--primario{
+    background-color: var(--negro);
 }
